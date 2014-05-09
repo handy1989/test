@@ -36,7 +36,11 @@ void Base::test()
 Base* Base::m_instance = new Base();
 int main()
 {
-    Base *p = new Base();
-    p->test();
+    Base *p1 = new Base();
+    Base *p2 = new Base();
+    p1->getInstance()->add();
+    printf("m_data:%d\n", p1->getInstance()->get());
+    p2->getInstance()->add();
+    printf("m_data:%d\n", p2->getInstance()->get());
     return 0;
 }
