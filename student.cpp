@@ -88,7 +88,7 @@ void deleteLink(student_t* &head, int id)
         return ;
     }
 
-    //找到这样的节点，使得q->next = p->next && p->id == id
+    //找到这样的节点，使得q->next = p && p->id == id
     student_t *p = head;
     student_t *q = head;
     while (p && p->id != id)
@@ -135,6 +135,7 @@ int main()
     printLink(head);
     deleteLink(head, 100) ;
     deleteLink(head, 10) ;
+    deleteLink(head, 123) ;
     printLink(head);
     return 0;
 }
